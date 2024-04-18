@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>xOtic - EVIL</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        const lenis = new Lenis();
+
+        lenis.on("scroll", (e) => {
+            console.log(e);
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <section class="sticky">
+            <nav>
+                <div class="header-padding"></div>
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="logo-text">xOtic</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Team</a></li>
+                        <a href="#" class="button">Contact Me</a>
+                    </ul>
+                </div>
+                <div class="header-padding"></div>
+            </nav>
+            <header>
+                <section class="hero">
+                    <video autoplay muted loop id="myVideo">
+                        <source src="hero.mp4" type="video/mp4" />
+                    </video>
+                    <div class="scroll-downs" data—cursor—text="Scroll down">
+                        <div class="mousey">
+                            <div class="scroller"></div>
+                        </div>
+                        <script>
+                            //scroll mousey
+                            const scrollDowns = document.querySelector(".scroll-downs");
+                            scrollDowns.addEventListener("click", () => {
+                                window.scrollBy({
+                                    top: window.innerHeight,
+                                    behavior: "smooth",
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="overlay-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
+                            <path stroke="black" stroke-linecap="round" stroke-width="2"
+                                d="M7.50002 18L16.5 18C17.3284 18 18 17.3284 18 16.5L18 7.49997" />
+                            <path stroke="black" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"
+                                d="M17.5 17.5L6 6" />
+                        </svg><br />
+
+                        Freelance <br />
+                        3D Level Designer & Artist
+                    </div>
+                </section>
+            </header>
+        </section>
+        <section class="website-content">
+            <div class="section-header">
+                <h1>WORKS*</h1>
+                <p style="font-size: medium;">Unreal Engine, Blender, Substance Painter, Drawing and Sketches and more...</p>
+            </div>
+
+            <div class="section-images">
+                <div class="row">
+                    <img src="1.jpg" alt="">
+                    <img src="2.jpeg" alt="">
+                </div>
+                <div class="row">
+                    <img src="3.jpg" alt="">
+                    <img src="4.jpeg" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
