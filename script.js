@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
         {
             scrollTrigger: {
                 trigger: ".website-content",
-                start: "top 200%" ,
+                start: "top 350%" ,
                 end: "top 50%",
                 scrub: 1,
             },
@@ -37,3 +37,15 @@ document.addEventListener("DOMContentLoaded", function(){
         }   
     );
 });
+
+// Function to check if an element is in viewport
+function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+

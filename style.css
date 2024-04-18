@@ -88,8 +88,8 @@ nav {
     font-size: 34px;
 }
 
-.logo-text:hover {
-    cursor: url('https://cdn.discordapp.com/attachments/1074958696582488096/1179641802786078810/ghost_3.png?ex=657a860a&is=6568110a&hm=58b34cbeceb4a55fb3637d8c0d0e1a52e9179ecb906f4850f43bfc9b36628800&'), auto;
+.logo-link:hover {
+    cursor: url('cust-cursor.png'), auto;
 }
 
 .nav-links ul {
@@ -131,6 +131,7 @@ nav {
 }
 
 .button {
+
     padding: 10px 20px;
     background-color: black;
     color: white !important; 
@@ -141,7 +142,7 @@ nav {
 }
 
 .button:hover {
-    background-color: #333;
+    background-color: #626262;
     transform: scale(1.05);
 }
 
@@ -211,7 +212,7 @@ nav {
 img{
     width: 70%;
     height: 100%;
-    object-fit: cover;
+    object-fit:contain;
 }
 
 .container{
@@ -228,10 +229,12 @@ section.sticky{
 }
 
 section.website-content{
+    border-top-left-radius: 42px;
+    border-top-right-radius: 42px;
     position: absolute;
     top: 100vh;
     width: 100%;
-    height: 300vh;
+    height: 482.2vh;
     background-color: rgb(11, 11, 11);
     padding: 6em 2em;
 }
@@ -268,4 +271,60 @@ section.website-content{
     text-transform: uppercase;
     text-align: right;
     width : 25%
+}
+
+
+footer {
+    border-top-left-radius: 42px;
+    border-top-right-radius: 42px;
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Added padding to create space between the content and social icons */
+}
+
+.footer-left {
+    flex: 1;
+    padding-right: 20px; /* Add padding to create space between the content and social icons */
+}
+
+.footer-left p{
+    padding:10px 20px 25px 10px;
+}
+
+
+.footer-right {
+    flex: 1; /* Equal flex to distribute space equally */
+    display: flex;
+    justify-content: flex-end; /* Align social icons to the right */
+    align-items: center;
+}
+
+.footer-right img {
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.footer-left .social-icons img{
+    margin-left: 10px;
+    width: auto;
+
+
+
+}
+
+/* Copyright text */
+.copyright {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+    font-size: 14px;
 }
