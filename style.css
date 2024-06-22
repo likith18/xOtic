@@ -10,6 +10,7 @@ html,body {
     width: 100%;
     overscroll-behavior: none;
     height: 100%;
+    background-color: black;
 }
 
 /* Styling the scrollbar */
@@ -62,8 +63,8 @@ header {
 }
 
 nav {
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
     backdrop-filter: blur(6.3px);
     -webkit-backdrop-filter: blur(6.3px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -229,6 +230,8 @@ section.sticky{
 }
 
 section.website-content {
+    overflow-x: hidden;
+    overflow: hidden;
     border-top-left-radius: 42px;
     border-top-right-radius: 42px;
     position: absolute;
@@ -318,13 +321,60 @@ footer {
     margin-left: 10px;
     width: auto;
 
-
-
 }
 
 /* Copyright text */
 .copyright {
     text-align: center;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
     font-size: 14px;
 }
+
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* CSS rules for smaller screens */
+    .row {
+        flex-direction: column;
+    }
+
+    section.website-content {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+
+    .row img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .section-header h1 {
+        font-size: 6vw; 
+    }
+
+    .section-header p {
+        font-size: 10px; 
+    }
+
+    .footer-content {
+        flex-direction: column; 
+    }
+
+    .footer-left,
+    .footer-right {
+        align-items: center;
+        text-align: center; 
+    }
+
+    .footer-right img {
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-right:40px;
+    }
+}
+
